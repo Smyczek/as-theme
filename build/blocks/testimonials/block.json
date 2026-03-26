@@ -1,0 +1,98 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "as-theme/testimonials",
+  "version": "1.0.0",
+  "title": "Testimonials",
+  "category": "as-theme-sections",
+  "icon": "format-quote",
+  "description": "Client testimonials Swiper slider with proof badges.",
+  "textdomain": "as-theme",
+  "attributes": {
+    "tag": {
+      "type": "string",
+      "default": "Testimonials"
+    },
+    "heading": {
+      "type": "string",
+      "default": "What Clients Say"
+    },
+    "testimonials": {
+      "type": "array",
+      "default": [
+        {
+          "text": "Adam, is a professional there is no adjective more suitable that can describe the skill he has in creating designs and websites. You can just describe to him what you want and it is like he can read your mind and produce a better result than anticipated.",
+          "author": "Upwork Client",
+          "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6#highlighted-truncation-15",
+          "stars": 5
+        },
+        {
+          "text": "Adam goes above and beyond to deliver excellent work. Very happy with the results!",
+          "author": "Upwork Client",
+          "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6#",
+          "stars": 5
+        },
+        {
+          "text": "Awesome designer that goes the extra mile. Great to work with.",
+          "author": "Upwork Client",
+          "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6#",
+          "stars": 5
+        },
+        {
+          "text": "Very happy with the result! Understood the task and delivered in an outstanding manner!",
+          "author": "Upwork Client",
+          "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6#",
+          "stars": 5
+        },
+        {
+          "text": "Outstanding work. Clean design, fast delivery, and great communication throughout the project.",
+          "author": "Upwork Client",
+          "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6#",
+          "stars": 5
+        },
+        {
+          "text": "Adam is a true professional. He delivered a pixel-perfect design and went beyond what was expected.",
+          "author": "Upwork Client",
+          "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6#",
+          "stars": 5
+        },
+        {
+          "text": "Incredible attention to detail. The website exceeded our expectations. Will definitely hire again.",
+          "author": "Upwork Client",
+          "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6#",
+          "stars": 5
+        },
+        {
+          "text": "One of the best freelancers I've worked with. Great design sense and solid coding skills.",
+          "author": "Upwork Client",
+          "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6#",
+          "stars": 5
+        }
+      ]
+    },
+    "proofItems": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Upwork Top Rated",
+          "icon": "trending-up"
+        },
+        {
+          "label": "99designs Top Level",
+          "icon": "award"
+        },
+        {
+          "label": "100% Job Success",
+          "icon": "shield-check"
+        }
+      ]
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

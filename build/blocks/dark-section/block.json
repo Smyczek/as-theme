@@ -1,0 +1,144 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "as-theme/dark-section",
+  "version": "1.0.0",
+  "title": "Dark Section",
+  "category": "as-theme-sections",
+  "icon": "admin-generic",
+  "description": "Dark section with platform logos, animated stats, and infinite-scrolling tools marquee.",
+  "textdomain": "as-theme",
+  "attributes": {
+    "platformsLabel": {
+      "type": "string",
+      "default": "Find Me On"
+    },
+    "platforms": {
+      "type": "array",
+      "default": [
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "Upwork",
+          "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6"
+        },
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "99designs",
+          "url": "https://en.99designs.de/profiles/webdoone"
+        },
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "Dribbble",
+          "url": "https://dribbble.com/smyczek"
+        },
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/adamskrzypczak/"
+        }
+      ]
+    },
+    "stats": {
+      "type": "array",
+      "default": [
+        {
+          "prefix": "$",
+          "value": 50000,
+          "suffix": "+",
+          "format": "comma",
+          "label": "Earned on Upwork"
+        },
+        {
+          "prefix": "",
+          "value": 104,
+          "suffix": "",
+          "format": "",
+          "label": "Projects Delivered"
+        },
+        {
+          "prefix": "",
+          "value": 100,
+          "suffix": "%",
+          "format": "",
+          "label": "Job Success Rate"
+        },
+        {
+          "prefix": "",
+          "value": 15,
+          "suffix": "+",
+          "format": "",
+          "label": "Years Experience"
+        }
+      ]
+    },
+    "toolsLabel": {
+      "type": "string",
+      "default": "Tools & Technologies"
+    },
+    "tools": {
+      "type": "array",
+      "default": [
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "Figma"
+        },
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "Adobe"
+        },
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "WordPress"
+        },
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "Shopify"
+        },
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "React"
+        },
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "Django"
+        },
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "Python"
+        },
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "Webflow"
+        },
+        {
+          "imageId": 0,
+          "imageUrl": "",
+          "title": "JavaScript"
+        }
+      ]
+    },
+    "marqueeSpeed": {
+      "type": "number",
+      "default": 30
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

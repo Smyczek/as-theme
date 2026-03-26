@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "as-theme/footer",
+	"version": "1.0.0",
+	"title": "Portfolio Footer",
+	"category": "as-theme-sections",
+	"icon": "minus",
+	"description": "Footer section with copyright, tagline, and social links.",
+	"textdomain": "as-theme",
+	"attributes": {
+		"copyright": {
+			"type": "string",
+			"default": "Adam Skrzypczak"
+		},
+		"tagline": {
+			"type": "string",
+			"default": "Designed & built by me · Currently building Murmlo"
+		},
+		"links": {
+			"type": "array",
+			"default": [
+				{ "label": "Upwork", "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6" },
+				{ "label": "99designs", "url": "https://en.99designs.de/profiles/webdoone" },
+				{ "label": "Dribbble", "url": "https://dribbble.com" },
+				{ "label": "LinkedIn", "url": "https://www.linkedin.com/in/adamskrzypczak/" },
+				{ "label": "Murmlo", "url": "https://murmlo.com" }
+			]
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true
+	},
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

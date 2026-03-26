@@ -1,0 +1,71 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "as-theme/about",
+	"version": "1.0.0",
+	"title": "Portfolio About",
+	"category": "as-theme-sections",
+	"icon": "admin-users",
+	"description": "About section with bio text and skills grid.",
+	"textdomain": "as-theme",
+	"attributes": {
+		"tag": {
+			"type": "string",
+			"default": "About"
+		},
+		"heading": {
+			"type": "string",
+			"default": "The Rare Kind Who Designs AND Builds."
+		},
+		"paragraphs": {
+			"type": "array",
+			"default": [
+				"Most developers can't design. Most designers can't build. I do both — and that changes everything for my clients.",
+				"With a background in New Media Arts from PJAIT Warsaw and 15+ years of hands-on experience, I've shipped 100+ projects across WordPress, Shopify, and custom web applications.",
+				"Currently: building <strong>Murmlo</strong> — a global commenting layer for the entire internet."
+			]
+		},
+		"skillGroups": {
+			"type": "array",
+			"default": [
+				{
+					"title": "Design",
+					"skills": [
+						{ "name": "UI/UX Design", "highlighted": false },
+						{ "name": "Figma", "highlighted": false },
+						{ "name": "Brand Identity", "highlighted": false },
+						{ "name": "Packaging", "highlighted": false },
+						{ "name": "99designs Top", "highlighted": true }
+					]
+				},
+				{
+					"title": "Development",
+					"skills": [
+						{ "name": "WordPress", "highlighted": false },
+						{ "name": "Shopify", "highlighted": false },
+						{ "name": "React / Django", "highlighted": false },
+						{ "name": "Python", "highlighted": false },
+						{ "name": "Upwork Top Rated", "highlighted": true }
+					]
+				},
+				{
+					"title": "Products",
+					"skills": [
+						{ "name": "Murmlo (SaaS)", "highlighted": false },
+						{ "name": "Chrome Extensions", "highlighted": false },
+						{ "name": "App Development", "highlighted": false },
+						{ "name": "Product Strategy", "highlighted": false },
+						{ "name": "Solo Indie Dev", "highlighted": true }
+					]
+				}
+			]
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true
+	},
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

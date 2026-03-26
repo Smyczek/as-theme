@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "as-theme/contact",
+	"version": "1.0.0",
+	"title": "Portfolio Contact",
+	"category": "as-theme-sections",
+	"icon": "email",
+	"description": "Contact section with info, social links, and a form.",
+	"textdomain": "as-theme",
+	"attributes": {
+		"tag": {
+			"type": "string",
+			"default": "Contact"
+		},
+		"heading": {
+			"type": "string",
+			"default": "Let's Build Something <span>Great.</span>"
+		},
+		"description": {
+			"type": "string",
+			"default": "Available for freelance projects. Tell me what you need and I'll get back to you within 24 hours."
+		},
+		"links": {
+			"type": "array",
+			"default": [
+				{ "label": "Hire me on Upwork", "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6" },
+				{ "label": "99designs profile", "url": "https://en.99designs.de/profiles/webdoone" },
+				{ "label": "Dribbble", "url": "https://dribbble.com/smyczek" },
+				{ "label": "LinkedIn", "url": "https://www.linkedin.com/in/adamskrzypczak/" },
+				{ "label": "murmlo.com", "url": "https://murmlo.com" }
+			]
+		},
+		"formFields": {
+			"type": "array",
+			"default": [
+				{ "name": "name", "label": "Name", "type": "text", "placeholder": "Your name", "required": true, "half": true },
+				{ "name": "email", "label": "Email", "type": "email", "placeholder": "your@email.com", "required": true, "half": true },
+				{ "name": "subject", "label": "Subject", "type": "text", "placeholder": "What's this about?", "required": false, "half": false },
+				{ "name": "message", "label": "Message", "type": "textarea", "placeholder": "Tell me about your project...", "required": true, "half": false }
+			]
+		},
+		"submitText": {
+			"type": "string",
+			"default": "Send Message"
+		},
+		"successMessage": {
+			"type": "string",
+			"default": "Message sent!"
+		},
+		"successDetail": {
+			"type": "string",
+			"default": "I'll get back to you within 24 hours."
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true
+	},
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

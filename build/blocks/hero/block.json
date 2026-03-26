@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "as-theme/hero",
+  "version": "1.0.0",
+  "title": "Hero Section",
+  "category": "as-theme-sections",
+  "icon": "cover-image",
+  "description": "Hero section with animated typewriter heading, email form, background photo, and scroll indicator.",
+  "textdomain": "as-theme",
+  "attributes": {
+    "headingBefore": {
+      "type": "string",
+      "default": "Let's Grow Your\nBusiness Through"
+    },
+    "typewriterWords": {
+      "type": "array",
+      "default": [
+        "Web Design",
+        "Branding",
+        "Shopify",
+        "WordPress",
+        "UI/UX"
+      ]
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "I craft brands, Shopify stores, and WordPress sites that actually convert. Tell me about your project."
+    },
+    "emailPlaceholder": {
+      "type": "string",
+      "default": "Enter your email to get started..."
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Let's Talk"
+    },
+    "hintText": {
+      "type": "string",
+      "default": "Free consultation · No commitment · Reply within 24h"
+    },
+    "photoId": {
+      "type": "number",
+      "default": 0
+    },
+    "photoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "scrollTarget": {
+      "type": "string",
+      "default": "#platforms"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "multiple": false
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

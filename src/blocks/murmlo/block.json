@@ -1,0 +1,68 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "as-theme/murmlo",
+	"version": "1.0.0",
+	"title": "Portfolio Featured Project",
+	"category": "as-theme-sections",
+	"icon": "share-alt",
+	"description": "Featured project card with details, tags, image, and CTA button. Supports dark/light theme and reversed layout.",
+	"textdomain": "as-theme",
+	"attributes": {
+		"tag": {
+			"type": "string",
+			"default": "Featured Project"
+		},
+		"title": {
+			"type": "string",
+			"default": "Murmlo"
+		},
+		"quote": {
+			"type": "string",
+			"default": "\u201cComments for the entire internet\u201d"
+		},
+		"description": {
+			"type": "string",
+			"default": "The independent discussion layer for any webpage \u2014 no site owner permission required."
+		},
+		"tags": {
+			"type": "array",
+			"default": [ "iOS", "Android", "Chrome", "Real-time", "AI Moderation" ]
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Visit Murmlo"
+		},
+		"buttonUrl": {
+			"type": "string",
+			"default": "https://murmlo.com"
+		},
+		"availability": {
+			"type": "string",
+			"default": "Available on iOS \u00b7 Android \u00b7 Chrome Extension"
+		},
+		"imageId": {
+			"type": "number",
+			"default": 0
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"theme": {
+			"type": "string",
+			"default": "dark"
+		},
+		"reversed": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true
+	},
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

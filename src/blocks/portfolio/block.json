@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "as-theme/portfolio",
+	"version": "1.0.0",
+	"title": "Portfolio Grid",
+	"category": "as-theme-sections",
+	"icon": "grid-view",
+	"description": "Portfolio cards grid with screenshot scroll-on-hover effect.",
+	"textdomain": "as-theme",
+	"attributes": {
+		"tag": {
+			"type": "string",
+			"default": "Portfolio"
+		},
+		"heading": {
+			"type": "string",
+			"default": "More Work"
+		},
+		"projects": {
+			"type": "array",
+			"default": [
+				{ "imageId": 0, "imageUrl": "", "category": "Web Design", "name": "Industrial — Landing Page", "description": "Dark industrial aesthetic with bold typography", "url": "#", "gradient": "pt-1" },
+				{ "imageId": 0, "imageUrl": "", "category": "Web Design", "name": "Architecture — Studio Website", "description": "Elegant architecture firm landing page", "url": "#", "gradient": "pt-2" },
+				{ "imageId": 0, "imageUrl": "", "category": "SaaS", "name": "Pulse — SaaS Dashboard", "description": "Modern SaaS platform with analytics UI", "url": "#", "gradient": "pt-3" },
+				{ "imageId": 0, "imageUrl": "", "category": "Web Design", "name": "Sport — Athletic Brand", "description": "Dynamic sports brand landing page", "url": "#", "gradient": "pt-4" },
+				{ "imageId": 0, "imageUrl": "", "category": "Web Design", "name": "Travel — Booking Platform", "description": "Immersive travel experience landing page", "url": "#", "gradient": "pt-5" },
+				{ "imageId": 0, "imageUrl": "", "category": "Web Design", "name": "Restaurant — Fine Dining", "description": "Elegant restaurant website with rich visuals", "url": "#", "gradient": "pt-6" }
+			]
+		},
+		"ctaText": {
+			"type": "string",
+			"default": "See all work on Upwork"
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6"
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true
+	},
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

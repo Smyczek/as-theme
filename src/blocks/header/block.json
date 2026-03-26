@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "as-theme/header",
+	"version": "1.0.0",
+	"title": "Site Header",
+	"category": "as-theme-sections",
+	"icon": "menu",
+	"description": "Fixed navigation bar with logo, links, CTA button, and mobile hamburger menu.",
+	"textdomain": "as-theme",
+	"attributes": {
+		"logoText": {
+			"type": "string",
+			"default": "AS"
+		},
+		"navLinks": {
+			"type": "array",
+			"default": [
+				{ "label": "Work", "url": "#work" },
+				{ "label": "About", "url": "#about" },
+				{ "label": "Murmlo", "url": "#murmlo" },
+				{ "label": "Contact", "url": "#contact" }
+			]
+		},
+		"ctaText": {
+			"type": "string",
+			"default": "Hire me"
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6"
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": false,
+		"className": true,
+		"multiple": false
+	},
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}
