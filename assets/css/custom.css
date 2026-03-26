@@ -999,7 +999,8 @@ a.port-card {
     padding: 16px 0 24px;
 }
 .testimonials {
-    overflow: visible;
+    overflow-x: clip;
+    overflow-y: visible;
 }
 a.test-card {
     text-decoration: none;

@@ -70,13 +70,15 @@ export default function Edit( { attributes, setAttributes } ) {
 						<hr />
 						<p><strong>{ __( 'Services List', 'as-theme' ) }</strong></p>
 						{ card.items.map( ( item, ii ) => (
-							<div key={ ii } style={ { display: 'flex', gap: '8px', marginBottom: '8px', alignItems: 'center' } }>
-								<TextControl
-									value={ item }
-									onChange={ ( val ) => updateItem( ci, ii, val ) }
-									style={ { flex: 1, marginBottom: 0 } }
-								/>
-								<Button isDestructive variant="link" onClick={ () => removeItem( ci, ii ) }>✕</Button>
+							<div key={ ii } style={ { display: 'flex', gap: '8px', marginBottom: '8px', alignItems: 'flex-start' } }>
+								<div style={ { flex: 1 } }>
+									<TextControl
+										value={ item }
+										onChange={ ( val ) => updateItem( ci, ii, val ) }
+										__nextHasNoMarginBottom
+									/>
+								</div>
+								<Button isDestructive variant="link" onClick={ () => removeItem( ci, ii ) } style={ { marginTop: '6px', flexShrink: 0 } }>✕</Button>
 							</div>
 						) ) }
 						<Button variant="secondary" onClick={ () => addItem( ci ) }>

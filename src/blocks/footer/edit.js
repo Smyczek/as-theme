@@ -77,9 +77,9 @@ export default function Edit( { attributes, setAttributes } ) {
 					</p>
 					<div className="footer-links">
 						{ links.map( ( link, i ) => (
-							<a key={ i } href={ link.url }>
+							<span key={ i } style={ { cursor: 'default' } }>
 								{ link.label }
-							</a>
+							</span>
 						) ) }
 					</div>
 				</div>

@@ -12,7 +12,7 @@ define( 'AS_THEME_VERSION', '1.4.0' );
 /**
  * GitHub auto-update checker
  */
-require get_template_directory() . '/vendor/plugin-update-checker/Puc/Autoload.php';
+require get_template_directory() . '/vendor/plugin-update-checker/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $as_theme_update_checker = PucFactory::buildUpdateChecker(
