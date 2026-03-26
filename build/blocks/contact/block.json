@@ -25,24 +25,24 @@
       "type": "array",
       "default": [
         {
-          "label": "Hire me on Upwork",
-          "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6"
+          "label": "Hire me",
+          "url": "https://example.com"
         },
         {
-          "label": "99designs profile",
-          "url": "https://en.99designs.de/profiles/webdoone"
+          "label": "Portfolio",
+          "url": "https://example.com"
         },
         {
           "label": "Dribbble",
-          "url": "https://dribbble.com/smyczek"
+          "url": "https://example.com"
         },
         {
           "label": "LinkedIn",
-          "url": "https://www.linkedin.com/in/adamskrzypczak/"
+          "url": "https://example.com"
         },
         {
-          "label": "murmlo.com",
-          "url": "https://murmlo.com"
+          "label": "Website",
+          "url": "https://example.com"
         }
       ]
     },

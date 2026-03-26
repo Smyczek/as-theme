@@ -6,7 +6,7 @@
 	"title": "Portfolio Featured Project",
 	"category": "as-theme-sections",
 	"icon": "share-alt",
-	"description": "Featured project card with details, tags, image, and CTA button. Supports dark/light theme and reversed layout.",
+	"description": "Featured project card with details, tags, image, and CTA button. Supports dark/light theme, reversed layout, custom colors, and image positioning.",
 	"textdomain": "as-theme",
 	"attributes": {
 		"tag": {
@@ -15,7 +15,7 @@
 		},
 		"title": {
 			"type": "string",
-			"default": "Murmlo"
+			"default": "Project Name"
 		},
 		"quote": {
 			"type": "string",
@@ -31,11 +31,11 @@
 		},
 		"buttonText": {
 			"type": "string",
-			"default": "Visit Murmlo"
+			"default": "View Project"
 		},
 		"buttonUrl": {
 			"type": "string",
-			"default": "https://murmlo.com"
+			"default": "https://example.com"
 		},
 		"availability": {
 			"type": "string",
@@ -49,6 +49,10 @@
 			"type": "string",
 			"default": ""
 		},
+		"imageFocalPoint": {
+			"type": "object",
+			"default": { "x": 0.5, "y": 0.5 }
+		},
 		"theme": {
 			"type": "string",
 			"default": "dark"
@@ -56,6 +60,26 @@
 		"reversed": {
 			"type": "boolean",
 			"default": false
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"accentColor": {
+			"type": "string",
+			"default": ""
+		},
+		"hoverColor": {
+			"type": "string",
+			"default": ""
+		},
+		"textColor": {
+			"type": "string",
+			"default": ""
+		},
+		"buttonTextColor": {
+			"type": "string",
+			"default": ""
 		}
 	},
 	"supports": {

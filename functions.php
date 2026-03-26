@@ -10,6 +10,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'AS_THEME_VERSION', '1.4.0' );
 
 /**
+ * GitHub auto-update checker
+ */
+require get_template_directory() . '/vendor/plugin-update-checker/Puc/Autoload.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$as_theme_update_checker = PucFactory::buildUpdateChecker(
+	'https://github.com/Smyczek/as-theme/',
+	get_template_directory() . '/style.css',
+	'as-theme'
+);
+$as_theme_update_checker->setBranch( 'main' );
+
+/**
  * Theme setup
  */
 function as_theme_setup() {
@@ -144,7 +157,7 @@ function as_theme_localize_scripts() {
 	if ( ! is_front_page() ) {
 		return;
 	}
-	wp_localize_script( 'as-theme-theme-bundle', 'as-themeContact', [
+	wp_localize_script( 'as-theme-theme-bundle', 'asThemeContact', [
 		'restUrl' => esc_url_raw( rest_url( 'as-theme/v1/contact' ) ),
 		'nonce'   => wp_create_nonce( 'wp_rest' ),
 	] );

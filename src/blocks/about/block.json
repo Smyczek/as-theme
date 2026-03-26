@@ -22,7 +22,7 @@
 			"default": [
 				"Most developers can't design. Most designers can't build. I do both — and that changes everything for my clients.",
 				"With a background in New Media Arts from PJAIT Warsaw and 15+ years of hands-on experience, I've shipped 100+ projects across WordPress, Shopify, and custom web applications.",
-				"Currently: building <strong>Murmlo</strong> — a global commenting layer for the entire internet."
+				"Currently: working on exciting new projects and exploring new technologies."
 			]
 		},
 		"skillGroups": {
@@ -45,13 +45,13 @@
 						{ "name": "Shopify", "highlighted": false },
 						{ "name": "React / Django", "highlighted": false },
 						{ "name": "Python", "highlighted": false },
-						{ "name": "Upwork Top Rated", "highlighted": true }
+						{ "name": "Top Rated Freelancer", "highlighted": true }
 					]
 				},
 				{
 					"title": "Products",
 					"skills": [
-						{ "name": "Murmlo (SaaS)", "highlighted": false },
+						{ "name": "Side Project (SaaS)", "highlighted": false },
 						{ "name": "Chrome Extensions", "highlighted": false },
 						{ "name": "App Development", "highlighted": false },
 						{ "name": "Product Strategy", "highlighted": false },

@@ -1,9 +1,9 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText, InspectorControls, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
-import { PanelBody, TextControl, Button, SelectControl, ToggleControl, ResponsiveWrapper } from '@wordpress/components';
+import { PanelBody, TextControl, Button, SelectControl, ToggleControl, FocalPointPicker, ColorPicker, BaseControl } from '@wordpress/components';
 
 export default function Edit( { attributes, setAttributes } ) {
-	const { tag, title, quote, description, tags, buttonText, buttonUrl, availability, imageId, imageUrl, theme, reversed } = attributes;
+	const { tag, title, quote, description, tags, buttonText, buttonUrl, availability, imageId, imageUrl, imageFocalPoint, theme, reversed, bgColor, accentColor, hoverColor, textColor, buttonTextColor } = attributes;
 
 	const classes = [
 		'murmlo',
@@ -41,6 +41,33 @@ export default function Edit( { attributes, setAttributes } ) {
 		} );
 	};
 
+	const focalPoint = imageFocalPoint || { x: 0.5, y: 0.5 };
+
+	const cardStyle = {};
+	if ( bgColor ) {
+		cardStyle.backgroundColor = bgColor;
+	}
+
+	const btnStyle = {};
+	if ( accentColor ) {
+		btnStyle.backgroundColor = accentColor;
+	}
+	if ( buttonTextColor ) {
+		btnStyle.color = buttonTextColor;
+	}
+
+	const tagStyle = {};
+	if ( accentColor ) {
+		tagStyle.color = accentColor;
+	}
+
+	const titleStyle = {};
+	const descStyle = {};
+	if ( textColor ) {
+		titleStyle.color = textColor;
+		descStyle.color = textColor;
+	}
+
 	return (
 		<>
 			<InspectorControls>
@@ -60,6 +87,68 @@ export default function Edit( { attributes, setAttributes } ) {
 						checked={ reversed }
 						onChange={ ( val ) => setAttributes( { reversed: val } ) }
 					/>
+				</PanelBody>
+				<PanelBody title={ __( 'Colors', 'as-theme' ) } initialOpen={ false }>
+					<BaseControl label={ __( 'Background Color', 'as-theme' ) }>
+						<ColorPicker
+							color={ bgColor || ( theme === 'dark' ? '#1a1d27' : '#ffffff' ) }
+							onChange={ ( val ) => setAttributes( { bgColor: val } ) }
+							enableAlpha
+						/>
+						{ bgColor && (
+							<Button variant="link" isDestructive onClick={ () => setAttributes( { bgColor: '' } ) } style={ { marginTop: '4px' } }>
+								{ __( 'Reset to default', 'as-theme' ) }
+							</Button>
+						) }
+					</BaseControl>
+					<BaseControl label={ __( 'Accent Color (tag, button)', 'as-theme' ) }>
+						<ColorPicker
+							color={ accentColor || '#f16232' }
+							onChange={ ( val ) => setAttributes( { accentColor: val } ) }
+							enableAlpha
+						/>
+						{ accentColor && (
+							<Button variant="link" isDestructive onClick={ () => setAttributes( { accentColor: '' } ) } style={ { marginTop: '4px' } }>
+								{ __( 'Reset to default', 'as-theme' ) }
+							</Button>
+						) }
+					</BaseControl>
+					<BaseControl label={ __( 'Button Hover Color', 'as-theme' ) }>
+						<ColorPicker
+							color={ hoverColor || '#e04f1f' }
+							onChange={ ( val ) => setAttributes( { hoverColor: val } ) }
+							enableAlpha
+						/>
+						{ hoverColor && (
+							<Button variant="link" isDestructive onClick={ () => setAttributes( { hoverColor: '' } ) } style={ { marginTop: '4px' } }>
+								{ __( 'Reset to default', 'as-theme' ) }
+							</Button>
+						) }
+					</BaseControl>
+					<BaseControl label={ __( 'Text Color (title, quote, description)', 'as-theme' ) }>
+						<ColorPicker
+							color={ textColor || ( theme === 'dark' ? '#ffffff' : '#1a1d27' ) }
+							onChange={ ( val ) => setAttributes( { textColor: val } ) }
+							enableAlpha
+						/>
+						{ textColor && (
+							<Button variant="link" isDestructive onClick={ () => setAttributes( { textColor: '' } ) } style={ { marginTop: '4px' } }>
+								{ __( 'Reset to default', 'as-theme' ) }
+							</Button>
+						) }
+					</BaseControl>
+					<BaseControl label={ __( 'Button Text Color', 'as-theme' ) }>
+						<ColorPicker
+							color={ buttonTextColor || '#ffffff' }
+							onChange={ ( val ) => setAttributes( { buttonTextColor: val } ) }
+							enableAlpha
+						/>
+						{ buttonTextColor && (
+							<Button variant="link" isDestructive onClick={ () => setAttributes( { buttonTextColor: '' } ) } style={ { marginTop: '4px' } }>
+								{ __( 'Reset to default', 'as-theme' ) }
+							</Button>
+						) }
+					</BaseControl>
 				</PanelBody>
 				<PanelBody title={ __( 'Image', 'as-theme' ) }>
 					<MediaUploadCheck>
@@ -90,6 +179,16 @@ export default function Edit( { attributes, setAttributes } ) {
 							) }
 						/>
 					</MediaUploadCheck>
+					{ imageUrl && (
+						<div style={ { marginTop: '16px' } }>
+							<FocalPointPicker
+								label={ __( 'Image Position', 'as-theme' ) }
+								url={ imageUrl }
+								value={ focalPoint }
+								onChange={ ( val ) => setAttributes( { imageFocalPoint: val } ) }
+							/>
+						</div>
+					) }
 				</PanelBody>
 				<PanelBody title={ __( 'Button', 'as-theme' ) }>
 					<TextControl
@@ -105,13 +204,19 @@ export default function Edit( { attributes, setAttributes } ) {
 				</PanelBody>
 				<PanelBody title={ __( 'Tags', 'as-theme' ) } initialOpen={ false }>
 					{ tags.map( ( t, i ) => (
-						<div key={ i } style={ { display: 'flex', gap: '8px', marginBottom: '8px', alignItems: 'center' } }>
+						<div key={ i } style={ { display: 'flex', gap: '8px', marginBottom: '8px', alignItems: 'flex-start' } }>
 							<TextControl
 								value={ t }
 								onChange={ ( val ) => updateTag( i, val ) }
-								style={ { flex: 1, marginBottom: 0 } }
+								__nextHasNoMarginBottom
+								style={ { flex: 1 } }
 							/>
-							<Button isDestructive variant="link" onClick={ () => removeTag( i ) }>✕</Button>
+							<Button
+								isDestructive
+								variant="tertiary"
+								onClick={ () => removeTag( i ) }
+								style={ { marginTop: '6px', minWidth: '24px', height: '24px', padding: 0 } }
+							>✕</Button>
 						</div>
 					) ) }
 					<Button variant="secondary" onClick={ addTag }>
@@ -122,7 +227,7 @@ export default function Edit( { attributes, setAttributes } ) {
 
 			<div { ...blockProps }>
 				<div className="container">
-					<div className="murmlo-card">
+					<div className="murmlo-card" style={ cardStyle }>
 						<div className="murmlo-inner">
 							<div className="murmlo-text">
 								<RichText
@@ -131,12 +236,14 @@ export default function Edit( { attributes, setAttributes } ) {
 									value={ tag }
 									onChange={ ( val ) => setAttributes( { tag: val } ) }
 									allowedFormats={ [] }
+									style={ tagStyle }
 								/>
 								<RichText
 									tagName="h2"
 									value={ title }
 									onChange={ ( val ) => setAttributes( { title: val } ) }
 									allowedFormats={ [] }
+									style={ titleStyle }
 								/>
 								<RichText
 									tagName="p"
@@ -144,6 +251,7 @@ export default function Edit( { attributes, setAttributes } ) {
 									value={ quote }
 									onChange={ ( val ) => setAttributes( { quote: val } ) }
 									allowedFormats={ [] }
+									style={ descStyle }
 								/>
 								<RichText
 									tagName="p"
@@ -151,6 +259,7 @@ export default function Edit( { attributes, setAttributes } ) {
 									value={ description }
 									onChange={ ( val ) => setAttributes( { description: val } ) }
 									allowedFormats={ [ 'core/bold', 'core/italic', 'core/link' ] }
+									style={ descStyle }
 								/>
 								<div className="murmlo-tags">
 									{ tags.map( ( t, i ) => (
@@ -158,7 +267,7 @@ export default function Edit( { attributes, setAttributes } ) {
 									) ) }
 								</div>
 								<div className="murmlo-btns">
-									<a className="btn btn-primary">{ buttonText } →</a>
+									<a className="btn btn-primary" style={ btnStyle }>{ buttonText } →</a>
 								</div>
 								<RichText
 									tagName="p"
@@ -170,7 +279,16 @@ export default function Edit( { attributes, setAttributes } ) {
 							</div>
 							<div className="murmlo-visual">
 								{ imageUrl ? (
-									<img src={ imageUrl } alt={ title } style={ { width: '100%', height: '100%', objectFit: 'cover' } } />
+									<img
+										src={ imageUrl }
+										alt={ title }
+										style={ {
+											width: '100%',
+											height: '100%',
+											objectFit: 'cover',
+											objectPosition: `${ focalPoint.x * 100 }% ${ focalPoint.y * 100 }%`,
+										} }
+									/>
 								) : (
 									<MediaUploadCheck>
 										<MediaUpload

@@ -11,20 +11,20 @@
 	"attributes": {
 		"copyright": {
 			"type": "string",
-			"default": "Adam Skrzypczak"
+			"default": "Your Name"
 		},
 		"tagline": {
 			"type": "string",
-			"default": "Designed & built by me · Currently building Murmlo"
+			"default": "Designed & built with passion"
 		},
 		"links": {
 			"type": "array",
 			"default": [
-				{ "label": "Upwork", "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6" },
-				{ "label": "99designs", "url": "https://en.99designs.de/profiles/webdoone" },
-				{ "label": "Dribbble", "url": "https://dribbble.com" },
-				{ "label": "LinkedIn", "url": "https://www.linkedin.com/in/adamskrzypczak/" },
-				{ "label": "Murmlo", "url": "https://murmlo.com" }
+				{ "label": "Portfolio", "url": "https://example.com" },
+				{ "label": "Social", "url": "https://example.com" },
+				{ "label": "Dribbble", "url": "https://example.com" },
+				{ "label": "LinkedIn", "url": "https://example.com" },
+				{ "label": "Website", "url": "https://example.com" }
 			]
 		}
 	},

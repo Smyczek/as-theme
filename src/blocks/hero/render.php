@@ -58,7 +58,7 @@ if ( ! empty( $attributes['className'] ) ) {
 		<div class="line"></div>
 	</div>
 	<div class="hero-bg-photo">
-		<img src="<?php echo esc_url( $photo_url ); ?>"<?php echo $hero_srcset . $hero_sizes; ?> alt="Adam Skrzypczak" class="hero-photo-img" fetchpriority="high">
+		<img src="<?php echo esc_url( $photo_url ); ?>"<?php echo $hero_srcset . $hero_sizes; ?> alt="<?php echo esc_attr( $attributes['headingBefore'] ?? 'Hero' ); ?>" class="hero-photo-img" fetchpriority="high">
 	</div>
 	<div class="container">
 		<div class="hero-content">

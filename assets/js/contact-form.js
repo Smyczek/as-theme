@@ -3,7 +3,7 @@
  */
 (function () {
     var form = document.getElementById('contactForm');
-    if (!form || typeof as-themeContact === 'undefined') return;
+    if (!form || typeof asThemeContact === 'undefined') return;
 
     var submitBtn = form.querySelector('.form-submit');
     var originalText = submitBtn ? submitBtn.textContent : 'Send';
@@ -25,11 +25,11 @@
             website_url: form.querySelector('[name="website_url"]') ? form.querySelector('[name="website_url"]').value : '',
         };
 
-        fetch(as-themeContact.restUrl, {
+        fetch(asThemeContact.restUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-WP-Nonce': as-themeContact.nonce,
+                'X-WP-Nonce': asThemeContact.nonce,
             },
             body: JSON.stringify(data),
         })

@@ -7,7 +7,7 @@
  * @var WP_Block $block      Block instance.
  */
 
-$copyright = esc_html( $attributes['copyright'] ?? 'Adam Skrzypczak' );
+$copyright = esc_html( $attributes['copyright'] ?? 'Your Name' );
 $tagline   = wp_kses_post( $attributes['tagline'] ?? '' );
 $links     = $attributes['links'] ?? [];
 $year      = date( 'Y' );

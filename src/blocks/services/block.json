@@ -25,8 +25,8 @@
 					"title": "Design",
 					"items": [ "UI/UX Design", "Brand Identity", "Packaging Design", "Figma Prototypes" ],
 					"price": "Starting from $60/hr",
-					"linkText": "Book on Upwork",
-					"linkUrl": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6",
+					"linkText": "Get in Touch",
+					"linkUrl": "https://example.com",
 					"external": true
 				},
 				{
@@ -34,8 +34,8 @@
 					"title": "Development",
 					"items": [ "WordPress / Shopify", "Custom Web Apps", "React + Django", "Speed Optimization" ],
 					"price": "Starting from $60/hr",
-					"linkText": "Book on Upwork",
-					"linkUrl": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6",
+					"linkText": "Get in Touch",
+					"linkUrl": "https://example.com",
 					"external": true
 				},
 				{

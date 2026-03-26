@@ -19,26 +19,26 @@
         {
           "imageId": 0,
           "imageUrl": "",
-          "title": "Upwork",
-          "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6"
+          "title": "Platform 1",
+          "url": "https://example.com"
         },
         {
           "imageId": 0,
           "imageUrl": "",
-          "title": "99designs",
-          "url": "https://en.99designs.de/profiles/webdoone"
+          "title": "Platform 2",
+          "url": "https://example.com"
         },
         {
           "imageId": 0,
           "imageUrl": "",
-          "title": "Dribbble",
-          "url": "https://dribbble.com/smyczek"
+          "title": "Platform 3",
+          "url": "https://example.com"
         },
         {
           "imageId": 0,
           "imageUrl": "",
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/adamskrzypczak/"
+          "title": "Platform 4",
+          "url": "https://example.com"
         }
       ]
     },
@@ -50,7 +50,7 @@
           "value": 50000,
           "suffix": "+",
           "format": "comma",
-          "label": "Earned on Upwork"
+          "label": "Revenue Generated"
         },
         {
           "prefix": "",

@@ -16,16 +16,16 @@
 		"platforms": {
 			"type": "array",
 			"default": [
-				{ "imageId": 0, "imageUrl": "", "title": "Upwork", "url": "https://www.upwork.com/freelancers/~01fd2163ff2438e0a6" },
-				{ "imageId": 0, "imageUrl": "", "title": "99designs", "url": "https://en.99designs.de/profiles/webdoone" },
-				{ "imageId": 0, "imageUrl": "", "title": "Dribbble", "url": "https://dribbble.com/smyczek" },
-				{ "imageId": 0, "imageUrl": "", "title": "LinkedIn", "url": "https://www.linkedin.com/in/adamskrzypczak/" }
+				{ "imageId": 0, "imageUrl": "", "title": "Platform 1", "url": "https://example.com" },
+				{ "imageId": 0, "imageUrl": "", "title": "Platform 2", "url": "https://example.com" },
+				{ "imageId": 0, "imageUrl": "", "title": "Platform 3", "url": "https://example.com" },
+				{ "imageId": 0, "imageUrl": "", "title": "Platform 4", "url": "https://example.com" }
 			]
 		},
 		"stats": {
 			"type": "array",
 			"default": [
-				{ "prefix": "$", "value": 50000, "suffix": "+", "format": "comma", "label": "Earned on Upwork" },
+				{ "prefix": "$", "value": 50000, "suffix": "+", "format": "comma", "label": "Revenue Generated" },
 				{ "prefix": "", "value": 104, "suffix": "", "format": "", "label": "Projects Delivered" },
 				{ "prefix": "", "value": 100, "suffix": "%", "format": "", "label": "Job Success Rate" },
 				{ "prefix": "", "value": 15, "suffix": "+", "format": "", "label": "Years Experience" }

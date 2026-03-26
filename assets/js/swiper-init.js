@@ -7,10 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!el) return;
 
     new Swiper('.test-swiper', {
-        slidesPerView: 1,
+        slidesPerView: 1.15,
         spaceBetween: 20,
         loop: true,
-        autoHeight: true,
         autoplay: {
             delay: 3500,
             disableOnInteraction: false,
@@ -22,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: '.test-next',
         },
         breakpoints: {
-            640: { slidesPerView: 2, spaceBetween: 24 },
-            1024: { slidesPerView: 3, spaceBetween: 28 },
+            640: { slidesPerView: 2.2, spaceBetween: 24 },
+            1024: { slidesPerView: 3.2, spaceBetween: 28 },
         },
     });
 });
