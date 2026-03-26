@@ -20,7 +20,7 @@ $as_theme_update_checker = PucFactory::buildUpdateChecker(
 	get_template_directory() . '/style.css',
 	'as-theme'
 );
-$as_theme_update_checker->setBranch( 'main' );
+$as_theme_update_checker->getVcsApi()->enableReleaseAssets();
 
 /**
  * Theme setup

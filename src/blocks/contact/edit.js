@@ -122,7 +122,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							/>
 							<div className="contact-links">
 								{ links.map( ( link, i ) => (
-									<span key={ i } style={ { cursor: 'default' } }>{ link.label }</span>
+									<a key={ i } style={ { cursor: 'default' } }>{ link.label }</a>
 								) ) }
 							</div>
 						</div>
